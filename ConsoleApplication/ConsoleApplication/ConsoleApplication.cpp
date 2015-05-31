@@ -8,6 +8,7 @@ using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	
+
 	if (sizeof(void *)==4)
 	{
 		cout << "32 bit program" << endl;
