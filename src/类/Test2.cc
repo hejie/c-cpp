@@ -3,6 +3,7 @@
 #include "Screen.h"
 int main(void)
 {
+
     
     Window_mgr wm;
     wm.display();
