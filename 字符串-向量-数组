@@ -1,0 +1,8 @@
+容器(string 和 迭代器) begin，end 或者(begin，cend)
+其中begin负责返回指向第一个元素(或者第一个字符)的迭代器,end 返回尾元素的下一个元素的迭代器。
+如：auto b=v.begin(),e=v.end(); 
+
+标准库函数 begin和end,主要基于指针本身也是迭代器
+int ia[]={1,2,3,4};
+int *beg=begin(ia);指向ia首元素的指针
+int *last=end(ia);指向了ia尾元素的下一个元素的指针

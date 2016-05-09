@@ -1,0 +1,2 @@
+string::size_type类型，string类及其他大多数标准库类型都定义了几种配套的类型，这些配套的类型体现了标准库类型与机器无关的特性，类型size_type 即是其中一种， 是无符号类型，能存放任意string对象的大小，所有存放string 类的size函数返回的值的变量都是string::size_type类型的。
+
