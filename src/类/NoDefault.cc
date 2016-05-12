@@ -9,27 +9,19 @@ using std::vector;
 class NoDefault{
 
     public :
-        NoDefault(int){
+        NoDefault(int i=0){
         }
-        vector<double> v;
-
-
-        NoDefault(){
-            std::cout << "wwwwwwwww" << std::endl;
-        }
-        void cc(){
-            static int c;
-        }
+      
     private:
-        const int i=0;
+        int i=0;
+        int str;
 
 };
 
 struct A{
 
-    NoDefault my_mem;
     vector<int> vec=vector<int>(10);
-    A(int) :d(0)  {
+    A(int) :d(10)  {
         for(auto i :vec){
 
             std::cout << i<< std::endl;
@@ -41,10 +33,12 @@ struct A{
     }
 };
 
-
-
 int main(void)
 {
     A a(0);
+    std::vector<NoDefault> v(10,NoDefault(10));
+
+    vector<NoDefault> f(2);//需提供一个默认的构造函数
+    vector<NoDefault> n{NoDefault(10)};
     return 0;
 }

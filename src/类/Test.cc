@@ -11,9 +11,17 @@ int main(void)
     std::cout<<"\n";
     myScreen.display(std::cout);
 
-    
+
     std::cout<<"\n";
 
-    Screen s;
+    std::cout << "-----------------" << std::endl;
+    //vector<string> str(10);
+
+    vector<Screen> s(10);
+
+
+    for (auto i :myScreen.screens) {
+        std::cout << i.get() << std::endl;
+    }
     return 0;
 }

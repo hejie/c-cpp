@@ -5,6 +5,7 @@
 #include<vector>
 #include<iostream>
 using std::string;
+using std::vector;
 using namespace std;
 
 class Screen;
@@ -52,12 +53,13 @@ class Screen {
         std::cout << "Screen 带1个参数初始化" << std::endl;
     }
 
-
     std::vector<Screen> screens;
     Screen() :screens{Screen(3,4,'B')}{
         std::cout << "Screen 默认构造"<< screens.size() << std::endl;
     }
-    char get() const
+    
+    vector<int> ival=vector<int>(1);
+    char get() const    
     {
         return contents[cursor];
     }
