@@ -19,7 +19,7 @@ class Person{
         strAddress=address;
 
     }
-
+    Person(int a=0);
     Person(std::istream &is)
     {
         is>>strName>>strAddress;
@@ -38,7 +38,7 @@ class Person{
               void  print() const;
 
               using pos=std::string::size_type;
-              
+
               Person(pos ht,pos wd,char c): cursor(0),height(ht),width(wd),contents(ht*wd,c){}
 
     private :
@@ -66,7 +66,7 @@ void Person::print()const
 
 int main(void)
 {
-
+    Person p;
     //构造函数在const对象的构造过程中可以向其写值
     const Person person("bbbbbb","wwww");
     print(std::cout,person) ;

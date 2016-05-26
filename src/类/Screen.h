@@ -26,8 +26,8 @@ class Window_mgr {
 class ConstRef{
 
     public :
-        //ConstRef()=default;
-        ConstRef(int index=0){
+        ConstRef()=default;
+        ConstRef(int index){
 
             std::cout <<"默认构造初始化 "<<index << std::endl;
 
@@ -57,9 +57,9 @@ class Screen {
     Screen() :screens{Screen(3,4,'B')}{
         std::cout << "Screen 默认构造"<< screens.size() << std::endl;
     }
-    
+
     vector<int> ival=vector<int>(1);
-    char get() const    
+    char get() const
     {
         return contents[cursor];
     }
@@ -76,10 +76,11 @@ class Screen {
 
 
     private:
-    //ConstRef wm;//当成员属于某种类类型，且该类没定义默认构造函数时，成员必须初始化
+    ConstRef wm;//当成员属于某种类类型，且该类没定义默认构造函数时，成员必须初始化
     pos cursor =0;
-    const pos height=0,width=0;
+    pos height=0,width=0;
     std::string contents;
+    string *s;
 };
 
 

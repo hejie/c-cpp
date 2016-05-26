@@ -187,4 +187,5 @@ clear 12                  //删除行号的所有断点
 clear list.c:12           //删除文件：行号的所有断点
 ```
 
+g++ -fno-elide-constructors Hasptr.cc -std=c++11
 

@@ -21,7 +21,12 @@ class Sales_data {
         double sellingprice=0.0;
         double saleprice=0.0;
         double discount=0.0;
-
+        int c;
+        /*
+         *  常量和引用必须初始化(类内初始化或者构造函数列表初始化)
+         */
+        //const int aa;
+        /*int &a;*/
 
 };
 

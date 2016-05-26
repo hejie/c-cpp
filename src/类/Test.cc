@@ -11,6 +11,7 @@ int main(void)
     std::cout<<"\n";
     myScreen.display(std::cout);
 
+    Screen ecn=myScreen;
 
     std::cout<<"\n";
 
