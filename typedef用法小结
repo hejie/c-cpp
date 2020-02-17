@@ -105,9 +105,7 @@ const PSTR实际上相当于const char*吗？不是的，它实际上相当于ch
 typedef在语法上是一个存储类的关键字（如auto、extern、mutable、static、register等一样），虽然它并不真正影响对象的存储特性，如：
 typedef static int INT2; //不可行
 编译将失败，会提示“指定了一个以上的存储类”。
-
-以上资料出自：http://blog.sina.com.cn/s/blog_4826f7970100074k.html 作者：赤龙
-
+ 
 第三、typedef 与 #define的区别
 
 案例一：
@@ -142,12 +140,7 @@ p2++;
 
 是p2++出错了。这个问题再一次提醒我们：typedef和#define不同，它不是简单的文本替换。上述代码中const pStr p2并不等于const char * p2。const pStr p2和const long x本质上没有区别，都是对变量进行只读限制，只不过此处变量p2的数据类型是我们自己定义的而不是系统固有类型而已。因此，const pStr p2的含义是：限定数据类型为char *的变量p2为只读，因此p2++错误。
 
-第四部分资料：使用 typedef 抑制劣质代码
-
-作者：Danny Kalev
-编译：MTT 工作室
-
-原文出处：Using typedef to Curb Miscreant Code
+第四部分资料：使用 typedef 抑制劣质代码 
 
 摘要：Typedef 声明有助于创建平台无关类型，甚至能隐藏复杂和难以理解的语法。不管怎样，使用 typedef 能为代码带来意想不到的好处，通过本文你可以学习用 typedef 避免缺欠，从而使代码更健壮。
 
